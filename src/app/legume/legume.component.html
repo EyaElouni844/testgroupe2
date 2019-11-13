@@ -1,0 +1,12 @@
+<li ([ngSyle]) *ngif="tabLegumes.frais==true">
+<ng-container  *ngif="tabLegumes.frais==true">
+<div [ngStyle]="{color:getColor()}">
+<img [src]="tabLegumes.image"/>{{legumes.name}}<p>prix(kg) :</p> {{tabLegumes.prix}} 
+<input type="radio" *ngif="tabLegumes.frais==true" checked> frais
+<input type="text" value="quantité" >  
+<button *ngIf="quantité>0" (click)="calculer()*legumes">Calculer Prix</button>
+<p>prix= </p>{{prix}}
+</div>
+</ng-container>
+</li>
+
